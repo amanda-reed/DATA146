@@ -1,4 +1,8 @@
-## Intro to Data Science
+# Intro to Data Science
  Amanda Reed
+ 
+ ## Informal Exercises
+ 
+ ## Projects
 
 
