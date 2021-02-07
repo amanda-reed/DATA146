@@ -9,6 +9,7 @@ This page gives access to my assignments and projects for DATA 146, Intro to Dat
  
  [Gapminder Exercise (2/7)](gapminder.md)
  
+ 
  ## Projects
 
 
