@@ -6,6 +6,8 @@ This page gives access to my assignments and projects for DATA 146, Intro to Dat
  
 ## Informal Exercises
 
- [Gapminder Exercise (2/7)](gapminder.md)
+[Gapminder Exercise (2/7)](gapminder.md)
  
 ## Projects
+
+[Project 1](project1.md)
