@@ -86,5 +86,7 @@ new_df = df[['year', 'country']]
 #### References
 
 Gazarov, Petr. “What Is an API? In English, Please.” FreeCodeCamp, 26 Mar. 2020, www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/. 
+
 “IO Tools (Text, CSV, HDF5, ...).” IO Tools (Text, CSV, HDF5, ...) - Pandas 1.2.2 Documentation, pandas.pydata.org/pandas-docs/stable/user_guide/io.html. 
+
 “Pandas.DataFrame.apply.” Pandas.DataFrame.apply - Pandas 1.2.2 Documentation, pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html. 
