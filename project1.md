@@ -52,7 +52,35 @@ The equals operator, ==, is used to compare two values, variables, or other piec
 
 The OR operator, |, is used when at least one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement still holds. For example, if you are trying to find which observations in a data set are from Italy or have a population over 1 million, you could subset the data by finding the observations where the country equals Italy OR the population is greater than 1 million. 
 
-The XOR operator, ^, is used when only one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement is false. In other words, either statement 1 is true or statement 2 is true. For example, if you are trying to determine ____.
+The XOR operator, ^, is used when only one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement is false. In other words, either statement 1 is true or statement 2 is true. For example, if you are trying perform a command on certain observations if they have either a population below 10 million or a life expectancy below 50 you would use XOR.
 
+#### Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
+.loc locates data based on its row label given in the data frame. .iloc locates data based on its iteger row label, which starts at 0. To extract a series of consecutive observations from a data frame, you can define the series of observations in the command. For example:
+```
+data.iloc[1:3]
+```
+returns the observations in rows 1 and 2. If .loc was used, the observations may not be consecutive. Likewise, the extract all observations from a series of consecutive columns, set the row range as : and the columns as the series of column indices. For example, the following code will return all observations for columns 1 and 2, including their row labels.
+```
+data.iloc[:,1:3]
+```
 
+#### Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+
+An API in an Application Programming Interface which serves as a messenger between users and the database. Users can use an API to retrieve information while the private database from which the information comes stays secure. An API receives a request from a user, then sends this request to the database, then returns the requested information back to the user. To construct a request to a remote server, use the url address ending with the name of the data file, for example data.csv, in the parameter of a get() function to pull data. (https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/) 
+```
+df = requests.get(url_to_data\data.csv)
+```
+
+#### Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+
+The apply() function from the pandas library is used to apply a certain function to all rows or columns in a data frame. Arguments within the command determine what function, either from previous code, another library, or a lamda function, as well as where to apply the function. This function is an alternative to applying a for loop to a series of data. Using apply() is more concise and may be faster in some cases. (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html)
+
+#### Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+
+Another approach to filtering the number of columns in a data frame is by selecting which columns you need using brackets and the string labels for each column. The example below assigns outcomes from two columns in the data set to a new data frame. If only one column is subset, only one set of brackets is used. If more than one columns are needed, two sets of brackets are necessary.
+```
+new_df = df[['year', 'country']]
+```
+
+Works Cited
