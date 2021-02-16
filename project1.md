@@ -24,7 +24,7 @@ df = pd.read_csv(foldername\name_of_file)
 ```
 Data that is saved in a different format may use a different read function. For example, read_html() is used to read an html file. Specifying the type of file to be read 
 indicates the reader function which converts the data into something that can be read and processed in a python file. However, files similar to csv, tsv for example, can
-be specified in the argument of the function by adding the seperation as "\t". (https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html)
+be specified in the argument of the function by adding the seperation as "\t". 
 ```
 data = pd.read_csv(path_to_data, sep = '\t')
 ```
@@ -67,14 +67,14 @@ data.iloc[:,1:3]
 
 #### Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 
-An API in an Application Programming Interface which serves as a messenger between users and the database. Users can use an API to retrieve information while the private database from which the information comes stays secure. An API receives a request from a user, then sends this request to the database, then returns the requested information back to the user. To construct a request to a remote server, use the url address ending with the name of the data file, for example data.csv, in the parameter of a get() function to pull data. (https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/) 
+An API in an Application Programming Interface which serves as a messenger between users and the database. Users can use an API to retrieve information while the private database from which the information comes stays secure. An API receives a request from a user, then sends this request to the database, then returns the requested information back to the user. To construct a request to a remote server, use the url address ending with the name of the data file, for example data.csv, in the parameter of a get() function to pull data.  
 ```
 df = requests.get(url_to_data\data.csv)
 ```
 
 #### Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
-The apply() function from the pandas library is used to apply a certain function to all rows or columns in a data frame. Arguments within the command determine what function, either from previous code, another library, or a lamda function, as well as where to apply the function. This function is an alternative to applying a for loop to a series of data. Using apply() is more concise and may be faster in some cases. (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html)
+The apply() function from the pandas library is used to apply a certain function to all rows or columns in a data frame. Arguments within the command determine what function, either from previous code, another library, or a lamda function, as well as where to apply the function. This function is an alternative to applying a for loop to a series of data. Using apply() is more concise and may be faster in some cases. 
 
 #### Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
 
@@ -83,4 +83,8 @@ Another approach to filtering the number of columns in a data frame is by select
 new_df = df[['year', 'country']]
 ```
 
-Works Cited
+#### References
+
+Gazarov, Petr. “What Is an API? In English, Please.” FreeCodeCamp, 26 Mar. 2020, www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/. 
+“IO Tools (Text, CSV, HDF5, ...).” IO Tools (Text, CSV, HDF5, ...) - Pandas 1.2.2 Documentation, pandas.pydata.org/pandas-docs/stable/user_guide/io.html. 
+“Pandas.DataFrame.apply.” Pandas.DataFrame.apply - Pandas 1.2.2 Documentation, pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html. 
