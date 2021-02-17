@@ -1,11 +1,10 @@
 ## Project 1
 
-#### Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make 
-that library of functions accessible to your workspace and current python work session?
+#### Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session?
 
 A package is a set of related classes and functions. A package will also contain a constructor function. A library is a collection of packages that must be imported at the 
 beginning of each coding session to be utilized. To install a package, you must import the library to which it is contained and then import the specific package you need. 
-For example, you can install the pandas library as so:
+For example, you can install the pandas library:
 ```
 import pandas as pd
 ```
@@ -17,8 +16,7 @@ from datetime import datetime
 
 #### Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns?
 
-A data frame is an array or table of information in which the columns represent variables and the rows represent observations. The Pandas library is particularly useful for working with data frames. In order to read a file in its remote location, you can use read_csv() within 
-the pandas library. 
+A data frame is an array or table of information in which the columns represent variables and the rows represent observations. The Pandas library is particularly useful for working with data frames. In order to read a file in its remote location, you can use read_csv() within the pandas library. 
 ```
 df = pd.read_csv(foldername\name_of_file)
 ```
@@ -36,7 +34,7 @@ The year variable has 12 unique instances: 1952, 1957, 1962, 1967, 1972, 1977, 1
 
 #### Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation.
 
-The country with the lowest life expectancy in the data frame was Rwanda in 1992, which had a life expectancy of 23.599. To find this data, I found the index of the minimum life expectancy in the data and then used that index to find all information about that particular observation. This is due to an increasingly violent civil war in Rwanda which escalated into a genocide in the 1990s. 
+The country with the lowest life expectancy in the data frame was Rwanda in 1992, which had a life expectancy of 23.599. To find this data, I found the index of the minimum life expectancy in the data and then used that index to find all information about that particular observation. This extremely low life expectancy is due to an increasingly violent civil war in Rwanda which escalated into a genocide in the 1990s. 
 
 #### Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
 
@@ -52,7 +50,7 @@ The equals operator, ==, is used to compare two values, variables, or other piec
 
 The OR operator, |, is used when at least one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement still holds. For example, if you are trying to find which observations in a data set are from Italy or have a population over 1 million, you could subset the data by finding the observations where the country equals Italy OR the population is greater than 1 million. 
 
-The XOR operator, ^, is used when only one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement is false. In other words, either statement 1 is true or statement 2 is true. For example, if you are trying perform a command on certain observations if they have either a population below 10 million or a life expectancy below 50 you would use XOR.
+The XOR operator, ^, is used when only one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement is false. In other words, either statement 1 is true or statement 2 is true. For example, if you are trying perform a command on certain observations if they have either a population below 10 million or a life expectancy below 50, you would use XOR.
 
 #### Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 
@@ -60,7 +58,7 @@ The XOR operator, ^, is used when only one of the statements in a conditional st
 ```
 data.iloc[1:3]
 ```
-returns the observations in rows 1 and 2. If .loc was used, the observations may not be consecutive. Likewise, the extract all observations from a series of consecutive columns, set the row range as : and the columns as the series of column indices. For example, the following code will return all observations for columns 1 and 2, including their row labels.
+returns the observations in rows 1 and 2. If .loc was used, the observations may not be consecutive. Likewise, to extract all observations from a series of consecutive columns, set the row range as : and the columns as the series of column indices. For example, the following code will return all observations for columns 1 and 2, including their row labels.
 ```
 data.iloc[:,1:3]
 ```
@@ -74,7 +72,7 @@ df = requests.get(url_to_data\data.csv)
 
 #### Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
 
-The apply() function from the pandas library is used to apply a certain function to all rows or columns in a data frame. Arguments within the command determine what function, either from previous code, another library, or a lamda function, as well as where to apply the function. This function is an alternative to applying a for loop to a series of data. Using apply() is more concise and may be faster in some cases. 
+The apply() function from the pandas library is used to apply a certain function to all rows or columns in a data frame. Arguments within the command determine what function, either from previous code, another library, or a lamda function, is used as well as where to apply the function. This function is an alternative to applying a for loop to a series of data. Using apply() is more concise and may be faster in some cases. 
 
 #### Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
 
