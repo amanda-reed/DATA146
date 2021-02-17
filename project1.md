@@ -48,7 +48,7 @@ The AND operator, &, is used when both statements must be true for the overall c
 
 The equals operator, ==, is used to compare two values, variables, or other pieces of data. For example, if you want to test if a user's input is equal to a certain value in order to perform a command, you would use this operator.
 
-The OR operator, | , is used when at least one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement still holds. For example, if you are trying to find which observations in a data set are from Italy or have a population over 1 million, you could subset the data by finding the observations where the country equals Italy OR the population is greater than 1 million. 
+The OR operator, \|, is used when at least one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement still holds. For example, if you are trying to find which observations in a data set are from Italy or have a population over 1 million, you could subset the data by finding the observations where the country equals Italy OR the population is greater than 1 million. 
 
 The XOR operator, ^, is used when only one of the statements in a conditional statement must be true for the statement to be true. If both are true, the statement is false. In other words, either statement 1 is true or statement 2 is true. For example, if you are trying perform a command on certain observations if they have either a population below 10 million or a life expectancy below 50, you would use XOR.
 
