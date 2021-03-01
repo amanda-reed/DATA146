@@ -8,7 +8,19 @@ A model representing life expectancy has features for disposable income, level o
 
 #### Question 2
 
+![](p2_plt1.png)
 
+mean: 0.5116517070232738; median: 0.5165611482584342
+
+![](p2_plt2.png)
+
+mean:0.16290616802718505; median: 0.12689898795018337
+
+![](p2_plt3.png)
+
+mean: 0.832621828753045; median: 0.8670896455700469
+
+For the first plot, I had my alpha and beta values set at 5 and 5 which produced a relatively balanced distribution. For the right skewed plot, I decreased the alpha value to 1 while keeping beta the same. Likewise for the left skewed plot, I switched the alpha and beta values, so `a=5.0` and `b=1.0`.
 
 #### Question 3
 
