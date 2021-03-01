@@ -8,15 +8,15 @@ A model representing life expectancy has features for disposable income, level o
 
 #### Question 2
 
-![](p2_plt1.png)
+![](p2_plt1.PNG)
 
 mean: 0.5116517070232738; median: 0.5165611482584342
 
-![](p2_plt2.png)
+![](p2_plt2.PNG)
 
 mean:0.16290616802718505; median: 0.12689898795018337
 
-![](p2_plt3.png)
+![](p2_plt3.PNG)
 
 mean: 0.832621828753045; median: 0.8670896455700469
 
