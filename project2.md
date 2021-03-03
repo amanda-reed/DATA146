@@ -32,7 +32,7 @@ The first plot shows the raw data from the gapminder set describing life expecta
 
 #### Question 4
 
-<img src="p2_plt7.PNG" height = "500" width = "500" />
+<img src="p2_plt6.PNG" height = "500" width = "500" />
 
 <img src="p2_plt8.PNG" height = "500" width = "500" />
 
