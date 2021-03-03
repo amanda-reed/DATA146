@@ -34,6 +34,6 @@ The first plot shows the raw data from the gapminder set describing life expecta
 
 <img src="p2_plt6.PNG" height = "500" width = "500" />
 
-<img src="p2_plt8.PNG" height = "500" width = "500" />
+<img src="p2_plt9.PNG" height = "500" width = "500" />
 
 The first plot shows a box and whiskers plot of the population for all countries for each given 5-year interval. The second plot, however, shows the data after a logarithmic transformation. The data for the first plot is within a given range with a few outliers. The inclusion of these outliers makes the overall plot harder to analyze and interpret. After the logarithmic transformation, there is a clearer distinction of the descriptive statistics of population for each 5-year period, making it easier to see how population has changed over time. 
