@@ -8,16 +8,15 @@ A model representing life expectancy has features for disposable income, level o
 
 #### Question 2
 
-![](p2_plt1.PNG=300x300)
 <img src="p2_plt1.PNG" height="500" width="500" />
 
 mean: 0.5116517070232738; median: 0.5165611482584342
 
-<img src=p2_plt2.PNG height="500" width="500" />
+<img src="p2_plt2.PNG" height="500" width="500" />
 
 mean:0.16290616802718505; median: 0.12689898795018337
 
-<img src=p2_plt3.PNG height="500" width="500" />
+<img src="p2_plt3.PNG" height="500" width="500" />
 
 mean: 0.832621828753045; median: 0.8670896455700469
 
@@ -25,16 +24,16 @@ For the first plot, I had my alpha and beta values set at 5 and 5 which produced
 
 #### Question 3
 
-<img src=p2_plt4.PNG height ="500" width ="500" />
+<img src="p2_plt4.PNG" height ="500" width ="500" />
 
-<img src=p2_plt5.PNG height = "500" width = "500" />
+<img src="p2_plt5.PNG" height = "500" width = "500" />
 
 The first plot shown above shows the raw data from the gapminder set describing life expectancy in 1952 and 2007. The second plot shows the data after a logarithmic transformation in which I created a new observation in the original dataset representing the log10 of life expectancy and then subset the data again based on the indices for 1952 and 2007. Though both plots show that there are more countries in 2007 with a higher life expectancy, the logarithmic transformation shows a more drastic contrast between the life expectancy of 1952 and 2007.
 
 #### Question 4
 
-<img src=p2_plt7.PNG height = "500" width = "500" />
+<img src="p2_plt7.PNG" height = "500" width = "500" />
 
-<img src=p2_plt8.PNG height = "500" width = "500" />
+<img src="p2_plt8.PNG" height = "500" width = "500" />
 
 The first plot shows a box and whiskers plot of the population for all countries for each given 5-year interval. The second plot, however, shows the data after a logarithmic transformation. The data for the first plot is within a given range with a few outliers. The inclusion of these outliers makes the overall plot harder to analyze and interpret. After the logarithmic transformation, there is a clearer distinction of the descriptive statistics of population for each 5-year period, making it easier to see how population has changed over time. 
