@@ -41,5 +41,79 @@ Rather than use a Linear Regression Model, I tried a Ridge Regression, which wou
 | 25 | 0.019 | -0.115 | 0.019 | 0.171 |
 FIX chart above irrelevant
 
+#### Modeling Charleston Home Actual Price
+
+| number of folds | testing score | training score | testing score (S) | training score (S) |
+| --------------- | ------------- | -------------- | ---| --- |
+| 7 | 0.004 | -0.009 | 0.004 | -0.013 |
+| 10 | 0.004 | -0.023 | 0.004 | -0.023 |
+| 15 | 0.004 | -0.022 | 0.004 | -0.032 |
+| 20 | 0.004 | -0.041 | 0.004 | -0.019 |
+| 25 | 0.004 | -0.052 | 0.004 | -0.051 |
 
 
+additional var for act charleston
+7
+Training: 0.343
+Testing: 0.245
+7 Standardized
+Training: 0.343
+Testing: -77814180999270972260352.000
+10
+Training: 0.339
+Testing: 0.267
+10 Standardized
+Training: 0.339
+Testing: -206576642891184313729024.000
+15
+Training: 0.338
+Testing: 0.240
+15 Standardized
+Training: 0.338
+Testing: -32054759452135441563648.000
+20
+Training: 0.338
+Testing: 0.215
+20 Standardized
+Training: 0.338
+Testing: -34976869210638289731584.000
+25
+Training: 0.337
+Testing: 0.223
+25 Standardized
+Training: 0.337
+Testing: -320826115460251214938112.000
+
+add var for ask charleston
+7
+Training: 0.282
+Testing: 0.233
+7 Standardized
+Training: 0.282
+Testing: 0.222
+10
+Training: 0.281
+Testing: 0.224
+10 Standardized
+Training: 0.281
+Testing: 0.194
+15
+Training: 0.280
+Testing: 0.186
+15 Standardized
+Training: 0.280
+Testing: 0.062
+20
+Training: 0.280
+Testing: 0.111
+20 Standardized
+Training: 0.280
+Testing: 0.066
+25
+Training: 0.279
+Testing: -0.117
+25 Standardized
+Training: 0.279
+Testing: -0.116
+
+difference in model predictability likely due to variability/negotiations that can occur when selling a house while asking prices are likely based off of what other local homes have sold for or are currently on the market for
