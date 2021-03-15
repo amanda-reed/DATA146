@@ -51,69 +51,22 @@ FIX chart above irrelevant
 | 20 | 0.004 | -0.041 | 0.004 | -0.019 |
 | 25 | 0.004 | -0.052 | 0.004 | -0.051 |
 
-
 additional var for act charleston
-7
-Training: 0.343
-Testing: 0.245
-7 Standardized
-Training: 0.343
-Testing: -77814180999270972260352.000
-10
-Training: 0.339
-Testing: 0.267
-10 Standardized
-Training: 0.339
-Testing: -206576642891184313729024.000
-15
-Training: 0.338
-Testing: 0.240
-15 Standardized
-Training: 0.338
-Testing: -32054759452135441563648.000
-20
-Training: 0.338
-Testing: 0.215
-20 Standardized
-Training: 0.338
-Testing: -34976869210638289731584.000
-25
-Training: 0.337
-Testing: 0.223
-25 Standardized
-Training: 0.337
-Testing: -320826115460251214938112.000
+| number of folds | testing score | training score | testing score (S) | training score (S) |
+| --------------- | ------------- | -------------- | ---| --- |
+| 7 | 0.343 | 0.245 | 0.343 | -77814180999270972260352.000 |
+| 10 | 0.339 | 0.267 | 0.339 | -206576642891184313729024.000 |
+| 15 | 0.338 | 0.240 | 0.338 | -32054759452135441563648.000 |
+| 20 | 0.338 | 0.215 | 0.338 | -34976869210638289731584.000 |
+| 25 | 0.337 | 0.223 | 0.337 | -320826115460251214938112.000 |
 
 add var for ask charleston
-7
-Training: 0.282
-Testing: 0.233
-7 Standardized
-Training: 0.282
-Testing: 0.222
-10
-Training: 0.281
-Testing: 0.224
-10 Standardized
-Training: 0.281
-Testing: 0.194
-15
-Training: 0.280
-Testing: 0.186
-15 Standardized
-Training: 0.280
-Testing: 0.062
-20
-Training: 0.280
-Testing: 0.111
-20 Standardized
-Training: 0.280
-Testing: 0.066
-25
-Training: 0.279
-Testing: -0.117
-25 Standardized
-Training: 0.279
-Testing: -0.116
+| number of folds | testing score | training score | testing score (S) | training score (S) |
+| --------------- | ------------- | -------------- | ---| --- |
+| 7 | 0.282 | 0.233 | 0.282 | 0.222 |
+| 10 | 0.281 | 0.224 | 0.281 | 0.194 |
+| 15 | 0.280 | 0.186 | 0.280 | 0.062 |
+| 20 | 0.280 | 0.111 | 0.280 | 0.066 |
+|25 | 0.279 | -0.117 | 0.279 | -0.116 |
 
 difference in model predictability likely due to variability/negotiations that can occur when selling a house while asking prices are likely based off of what other local homes have sold for or are currently on the market for
