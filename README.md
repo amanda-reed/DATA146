@@ -15,3 +15,5 @@ This page gives access to my assignments and projects for DATA 146, Intro to Dat
 [Project 2](project2.md)
 
 [Project 3](project3.md)
+
+[Midterm](midterm.md)
