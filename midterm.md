@@ -2,7 +2,7 @@
 
 #### Question 15
 
-After loading the dataset and defining my DoKFold function (see [question 18](midterm.md#-question-18)), I created a dataframe containing the features and target of the data. To find the correlation 
+After loading the dataset and defining my DoKFold function (see [question 18](#question-18)), I created a dataframe containing the features and target of the data. To find the correlation 
 coefficients of each features variable as it was related to the target, I used the ```corr()``` function and found that Median Income (MedInc) had the highest correlation.
 
 #### Question 16
