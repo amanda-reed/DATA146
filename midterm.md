@@ -22,7 +22,7 @@ In order to run Linear, Ridge, and Lasso regression models on the data using KFo
 ```
 kf = KFold(n_splits=k, shuffle=True, random_state=146)
 ```
-Then I defined empty arrays that would store the training and testing scores and MSE values for each fold. Then I started a for loop which would run the KFold cross validation for the specified model for each fold. I set the feature and target training and testing data based on the indices for training and testing data set by the KFold function. I then standardized the features if specified in the parameters. I fit the model to the training data and appended the training and testing scores of the model. 
+I defined empty arrays that would store the training and testing scores and MSE values for each fold. Then I started a for loop which would run the KFold cross validation for the specified model for each fold. I set the feature and target training and testing data based on the indices for training and testing data set by the KFold function. I then standardized the features if specified in the parameters. I fit the model to the training data and appended the training and testing scores of the model. 
 
 To calculate MSE, I squared the difference between the actual and predicted training and testing values of the dataset. I took the mean of the values and appended it to the arrays of MSE values for each fold. 
 ```
@@ -38,7 +38,7 @@ To find the R^2 value on the test folds, I ran DoKFold with the parameters set a
 
 #### Question 19
 
-To perform a ridge regression on the data, I imported the Ridge Regression function, defined the alpha range, and defined empty arrays where the training and testing scores would be stored. Then I created a for loop to run the ridge regression for each alpha value in the indicated range over the DoKFold function. For each loop, I appended the testing and training scores and MSE values. After running the regression, I found the index of the maximum testing score to determine the optimal alpha value. Thus, the R^2 value of the testing folds for this value was 0.60201 for the optimal alpha value, which was 25.8.
+To perform a ridge regression on the data, I imported the Ridge Regression function, defined the alpha range, and defined empty arrays where the training and testing scores would be stored. Then I created a for loop to run the ridge regression for each alpha value in the indicated range over the DoKFold function. For each loop, I appended the testing and training scores and MSE values. After running the regression, I found the index of the maximum testing score to determine the optimal alpha value. Thus, the R^2 value of the testing folds was 0.60201 for the optimal alpha value, which was 25.8.
 
 <img src = 'midterm_rid.jpg' height = '450' width = '500'/>
 
@@ -53,7 +53,9 @@ Similar to the previous question, I imported the Lasso Regression, defined the a
 In finding the model that estimates the smallest coefficient for the variable that is least correlated to the target, I determined that the index number for the variable (AveOccup) was 5, which was used to determine the coefficient from each regression. I fit each type of model on the scaled data, defining the optimal alpha value if needed. Then I found the coefficient in the 5th index for each respective model. 
 
 Linear regression: -0.0393
+
 Ridge regression: -0.0394
+
 Lasso regression: -0.376
 
 Thus, the Ridge regression estimates the smallest coefficient for the variable that is least correlated to the target.
@@ -63,7 +65,9 @@ Thus, the Ridge regression estimates the smallest coefficient for the variable t
 Similar to the previous question, I found the index for the variable which is most correlated to the target (MedInc) which was 0. I extracted the first value for each model's list of coefficients and found the following values:
 
 Linear regression: 0.8296
+
 Ridge regression: 0.8288
+
 Lasso regression: 0.8200
 
 Thus, the Lasso regression estimates the smallest coefficient for the variable that is most correlated to the target.
