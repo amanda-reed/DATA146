@@ -40,13 +40,13 @@ To find the R^2 value on the test folds, I ran DoKFold with the parameters set a
 
 To perform a ridge regression on the data, I imported the Ridge Regression function, defined the alpha range, and defined empty arrays where the training and testing scores would be stored. Then I created a for loop to run the ridge regression for each alpha value in the indicated range over the DoKFold function. For each loop, I appended the testing and training scores and MSE values. After running the regression, I found the index of the maximum testing score to determine the optimal alpha value. Thus, the R^2 value of the testing folds for this value was 0.60201 for the optimal alpha value, which was 25.8.
 
-<img src = 'midterm_rid.jpg' height = '500' width = '500'/>
+<img src = 'midterm_rid.jpg' height = '450' width = '500'/>
 
 #### Question 20
 
 Similar to the previous question, I imported the Lasso Regression, defined the alpha range, and defined empty arrays where the training and testing scores would be stored. Then I created a for loop over which the regression would be run for each possible alpha value while performing a KFold cross validation. After running the regression over the entire alpha range, I found the optimal alpha value to be 0.00186 with a testing score of 0.60213. 
 
-<img src = 'midterm_lasso.jpg' height = '500' width = '500'/>
+<img src = 'midterm_lasso.jpg' height = '450' width = '500'/>
 
 #### Question 21
 
@@ -72,10 +72,10 @@ Thus, the Lasso regression estimates the smallest coefficient for the variable t
 
 To determine the optimal alpha value for a Ridge regression based on MSE, I found the index for the minimum MSE value in the array of testing MSE values for a Ridge regression and determined the coordinating alpha value. The minimum MSE was 0.60201 and the optimal alpha value was 26.1, which was different from the alpha value found when using R^2, thus a different alpha value is found when using MSE as opposed to R^2.
 
-<img src = 'midterm_ridmse.PNG' height = '500' width = '500'/>
+<img src = 'midterm_ridmse.PNG' height = '450' width = '500'/>
 
 #### Question 24
 
 Similar to the previous question, I found the minimum MSE value for the testing dataset, which was 0.60213. Using the coordinating index, I found the optimal alpha value to be 0.00186. 
 
-<img src = 'midterm_lasmse.PNG' height = '500' width = '500'>
+<img src = 'midterm_lasmse.PNG' height = '450' width = '500'>
