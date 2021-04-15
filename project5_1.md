@@ -1,0 +1,10 @@
+## Project 5 Part 1
+
+#### Regression over Dataset with WealthC as Target
+
+#### Regression over Dataset with WealthI as Target
+
+images
+1: lasso reg wealthc 0.001 0.734441362468904 0.7337891277301398 0.4451243595089821 0.44583162965134593 (0.001, .4, 50)
+2: rid wealth c 13.848484848484848 0.7357905749695652 0.7352802601759661 0.4428637774829151 0.44366867017988804 (13, 15, 100)
+
