@@ -17,14 +17,14 @@ Initially, I set the alpha range to (0, 100) to determine a smaller range that m
 <img src = 'p54.PNG' height = '350' width = '350'/>
 maybe redo (0, 25)
 <img src = 'p56.PNG' height = '350' width = '350'/>
-alpha = 75.0204081632653: training score-0.7355293400183553; testing score-0.7350057659737123; train MSE-0.4433014330380833; test MSE-0.44405245411322963
+alpha = 75.02040: training score-0.73552; testing score-0.73500; train MSE-0.44330; test MSE-0.44405
 
 #### Lasso Regression
 
 Since Lasso Regressions often have significantly smaller alpha values, I set my inital range to (0, 2) and found optimal alpha values closer to 0. As I lowered and decreased the range, I found that the testing scores continued to increase. Ultimately, I found that the optimal alpha value was 0.000021, as shown in the plot below.
 
 <img src = 'p58.PNG' height = '350' width = '350'/>
-alpha = 0.000021; training score-0.7353161045156538; testing score-0.7347215387705568; train MSE-0.4436585480357807; test MSE-0.44441573245416216
+alpha = 0.000021; training score-0.73531; testing score-0.73472; train MSE-0.44365; test MSE-0.44441
 
 Overall, both regression proved to be successful in modeling the data accurately as testing and training scores remained consistently high throughout the modeling process. This indicates that ```wealthC ``` may be a reasonable target to represent the dataset. 
 
@@ -41,9 +41,9 @@ As with WealthC as the target, the correlation coefficients did not change after
 Similar to when ```wealthC``` was the target, I first ran the ridge regression over a large range, (0, 100) to determine where optimal alpha values may be clustered. I found that there were increased testing scores on the data at approximately 3 and 85. I narrowed the range and found two optimal alpha values as shown below:
 
 <img src = 'p59.PNG' height = '350' width = '350'/>
-alpha = 3.4561403508771926; training score-0.8258254555993014; testing score-0.825364052942596; train MSE-1750292038.1575189; test MSE-1754099888.5952823
+alpha = 3.45614; training score-0.82582; testing score-0.82536; train MSE-1750292038.1575; test MSE-1754099888.5952
 <img src = 'p510.PNG' height = '350' width = '350'/>
-alpha = 85.43037974683544; training score-0.8252845633760625; testing score-0.8248692926446278; train MSE-1755727661.685636; test MSE-1759202034.1834388
+alpha = 85.43037; training score-0.82528; testing score-0.82486; train MSE-1755727661.6856; test MSE-1759202034.1834
 
 #### Lasso Regression
 
