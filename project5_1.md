@@ -6,7 +6,7 @@ In the preprocessing stage, I checked for and removed nan values in the data, wh
 
 #### Linear Regression
 
-To perform a linear regression, I set up my DoKFold function ([described here](midterm.md)) ([described here](#question-18)) ([described here](midterm.md#question-18)) and set the number of folds to 20. It is important to note that I changed the k value several times but did not see a significant change in the MSE and R^2 values. To continue, I ran the linear regression with 20 folds for the standardized and unstandardized dataset. The unstandarized set had a minimum testing MSE value of 0.41745 and an average testing MSE value of 0.44376. Likewise, the standardized data had a minimum testing MSE value of 0.42096 and an average of 0.44378. Even after standardizing the data, both regression performed relatively similarly. 
+To perform a linear regression, I set up my DoKFold function ([described here](midterm.md#question-18)) and set the number of folds to 20. It is important to note that I changed the k value several times but did not see a significant change in the MSE and R^2 values. To continue, I ran the linear regression with 20 folds for the standardized and unstandardized dataset. The unstandarized set had a minimum testing MSE value of 0.41745 and an average testing MSE value of 0.44376. Likewise, the standardized data had a minimum testing MSE value of 0.42096 and an average of 0.44378. Even after standardizing the data, both regression performed relatively similarly. 
 
 Upon calculating the correlation matrix for the data, I found that that of the original dataset and the standardized set were the same.
 
