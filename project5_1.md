@@ -14,16 +14,16 @@ Upon calculating the correlation matrix for the data, I found that that of the o
 
 Initially, I set the alpha range to (0, 100) to determine a smaller range that may contain an optimal alpha value. I was able to find that there were relatively high testing scores at approximately 20 and 75. After working with smaller ranges and increasing the number of cuts in the range, I was able to find two optimal alpha values. Though most alpha values had similar testing scores from the ridge regression, the plots below show that a few values in particular stood out. 
 
-<img src = 'p54.PNG' height = '350' width = '350'/>
+<img src = 'p54.PNG' height = '350' width = '400'/>
 maybe redo (0, 25)
-<img src = 'p56.PNG' height = '350' width = '350'/>
+<img src = 'p56.PNG' height = '350' width = '400'/>
 alpha = 75.02040: training score-0.73552; testing score-0.73500; train MSE-0.44330; test MSE-0.44405
 
 #### Lasso Regression
 
 Since Lasso Regressions often have significantly smaller alpha values, I set my inital range to (0, 2) and found optimal alpha values closer to 0. As I lowered and decreased the range, I found that the testing scores continued to increase. Ultimately, I found that the optimal alpha value was 0.000021, as shown in the plot below.
 
-<img src = 'p58.PNG' height = '350' width = '350'/>
+<img src = 'p58.PNG' height = '350' width = '400'/>
 alpha = 0.000021; training score-0.73531; testing score-0.73472; train MSE-0.44365; test MSE-0.44441
 
 Overall, both regression proved to be successful in modeling the data accurately as testing and training scores remained consistently high throughout the modeling process. This indicates that ```wealthC ``` may be a reasonable target to represent the dataset. 
@@ -40,16 +40,16 @@ As with WealthC as the target, the correlation coefficients did not change after
 
 Similar to when ```wealthC``` was the target, I first ran the ridge regression over a large range, (0, 100) to determine where optimal alpha values may be clustered. I found that there were increased testing scores on the data at approximately 3 and 85. I narrowed the range and found two optimal alpha values as shown below:
 
-<img src = 'p59.PNG' height = '350' width = '350'/>
+<img src = 'p59.PNG' height = '350' width = '400'/>
 alpha = 3.45614; training score-0.82582; testing score-0.82536; train MSE-1750292038.1575; test MSE-1754099888.5952
-<img src = 'p510.PNG' height = '350' width = '350'/>
+<img src = 'p510.PNG' height = '350' width = '400'/>
 alpha = 85.43037; training score-0.82528; testing score-0.82486; train MSE-1755727661.6856; test MSE-1759202034.1834
 
 #### Lasso Regression
 
 Similar to the process of using lasso regression in the previous example, I used a larger range with a smaller number of cuts to initally find possible alpha values. In doing so, I found possible alpha values cluster at 1. I narrowed the range to (0.8, 1.2) and further narrowed the range and increased the number of cuts to find the optimal alpha value for the data. 
 
-<img src = 'p511.PNG' height = '350' width = '350'/>
+<img src = 'p511.PNG' height = '350' width = '400'/>
 
 
 ---
@@ -58,10 +58,8 @@ Similar to the process of using lasso regression in the previous example, I used
 
 Overall, though the MSE values from the Linear Regression model were significantly worse when ```wealthI``` was the target, the results from the Ridge and Lasso regression were consistently better than when ```wealthC``` was used as the target. After testing several different models with subsequent alpha value ranges, the best model resulted from the Lasso regression with ```wealthI``` as the target and ```a= ```. As shown in the above explanations, this model had the greatest training and testing score values which was consistent for similar alpha values. 
 
-images
-1: lasso reg wealthc 0.001 0.734441362468904 0.7337891277301398 0.4451243595089821 0.44583162965134593 (0.001, .4, 50)
-2: rid wealth c 13.848484848484848 0.7357905749695652 0.7352802601759661 0.4428637774829151 0.44366867017988804 (13, 15, 100)
-4
+
+
 5:rid wealth c 73.26530612244898 0.735536599394592 0.7349837466712954 0.4432891665668458 0.4440465506710101
 6:rd wealth c 75.0204081632653 0.7355293400183553 0.7350057659737123 0.4433014330380833 0.44405245411322963
 7: lasso c 0.00025 0.7136339380713137 0.7131444208894668 0.4800011233039849 0.48035115656967176
