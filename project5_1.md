@@ -24,7 +24,7 @@ alpha = 75.02040: training score-0.73552; testing score-0.73500; train MSE-0.443
 
 Since Lasso Regressions often have significantly smaller alpha values, I set my inital range to (0, 2) and found optimal alpha values closer to 0. As I lowered and decreased the range, I found that the testing scores continued to increase. Ultimately, I found that the optimal alpha value was 0.000021, as shown in the plot below.
 
-<img src = 'p58.PNG' height = '350' width = '400'/>
+<img src = 'p58.PNG' height = '350' width = '450'/>
 alpha = 0.000021; training score-0.73531; testing score-0.73472; train MSE-0.44365; test MSE-0.44441
 
 Overall, both regression proved to be successful in modeling the data accurately as testing and training scores remained consistently high throughout the modeling process. This indicates that ```wealthC ``` may be a reasonable target to represent the dataset. 
@@ -41,17 +41,17 @@ As with WealthC as the target, the correlation coefficients did not change after
 
 Similar to when ```wealthC``` was the target, I first ran the ridge regression over a large range, (0, 100) to determine where optimal alpha values may be clustered. I found that there were increased testing scores on the data at approximately 3 and 85. I narrowed the range and found two optimal alpha values as shown below:
 
-<img src = 'p59.PNG' height = '350' width = '400'/>
+<img src = 'p59.PNG' height = '350' width = '450'/>
 alpha = 3.45614; training score-0.82582; testing score-0.82536; train MSE-1750292038.1575; test MSE-1754099888.5952
 
-<img src = 'p510.PNG' height = '350' width = '400'/>
+<img src = 'p510.PNG' height = '350' width = '450'/>
 alpha = 85.43037; training score-0.82528; testing score-0.82486; train MSE-1755727661.6856; test MSE-1759202034.1834
 
 #### Lasso Regression
 
 Similar to the process of using lasso regression in the previous example, I used a larger range with a smaller number of cuts to initally find possible alpha values. In doing so, I found possible alpha values cluster at 1. I narrowed the range to (0.8, 1.2) and further narrowed the range and increased the number of cuts to find the optimal alpha value for the data. 
 
-<img src = 'p511.PNG' height = '350' width = '400'/>
+<img src = 'p511.PNG' height = '350' width = '450'/>
 alpha = 0.87448; training score-0.82568; testing score-0.82515; train MSE-1751682877.9728; test MSE-1755698306.0079
 
 ---
