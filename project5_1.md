@@ -14,10 +14,10 @@ Upon calculating the correlation matrix for the data, I found that that of the o
 
 Initially, I set the alpha range to (0, 100) to determine a smaller range that may contain an optimal alpha value. I was able to find that there were relatively high testing scores at approximately 20 and 75. After working with smaller ranges and increasing the number of cuts in the range, I was able to find two optimal alpha values. Though most alpha values had similar testing scores from the ridge regression, the plots below show that a few values in particular stood out. 
 
-<img src = 'p54.PNG' height = '350' width = '400'/>
-maybe redo (0, 25)
+<img src = 'p512.PNG' height = '350' width = '450'/>
+alpha = 20.33333: training score-0.73576; testing score-0.73518; train MSE-0.44291; test MSE-0.443677
 
-<img src = 'p56.PNG' height = '350' width = '400'/>
+<img src = 'p56.PNG' height = '350' width = '450'/>
 alpha = 75.02040: training score-0.73552; testing score-0.73500; train MSE-0.44330; test MSE-0.44405
 
 #### Lasso Regression
