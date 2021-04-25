@@ -10,7 +10,7 @@ After importing the necessary commands and libraries, I found ```Xtrain, Xtest, 
 
 <img src='p5_1.PNG' height = '350' width = '450'/>     <img src = 'p5_2.PNG' height = '350' width = '450'/>
 
-In effort to try improving the training and testing results, I ran the KNN Classification over a range of (70, 80) with distance as a weight. Though the training scores improved, the maximum testing score stayed relatively similar. I found the maximum testing score to be 0.50268 with ```k=73```. 
+In effort to try improving the training and testing results, I ran the KNN Classification over a range of (70, 80) with distance as a weight. Though the training scores improved, the maximum testing score stayed relatively similar. I found the maximum testing score to be 0.50268 with ```k=73```. Since the training scores improved but the testing scores did not, the KNN model may be overfit when using distance as a weight. Additionally, there may be little significance of distance if the points are relatively evenly spaced from eachother. 
 
 <img src = 'p5_3.PNG' height = '350' width = '450'/>
 
@@ -71,8 +71,5 @@ accuracy of classification for scaled and unscaled data
 ---
 ### Final Thoughts
 
-min num splits for random forest 29 or 28
-29 0.5436798438262567
-28 0.541727672035139
-12, 13: scaled rfc with 100, 500, 1000, 5000 compare with 11??
+Overall, each model had testing scores of approximately 0.50, with varying training scores. We saw that adding distance as a weight for the KNN model and running a Random Forest Classification over each dataset signficantly improved the training scores while the testing scores remained the same or decreased. These models were likely overfit, and thus did not perform as accurately. However, the KNN model without weight consistently performed well, especially after recoding the target. The KNN model with the recoded target performed the best, with a testing score of 0.65, when the number of neighbors was 72 and the data was scaled. In addition, the training score was similar for this model, ruling out the likelihood that the model was overfit. By condensing the classification for this dataset, the KNN model was able to more easily distinguish between each class and thus, improve the accuracy of the model. 
 
