@@ -22,40 +22,55 @@ For the Logistic Regression, I ran ```GetData(scale = True)``` over the dataset 
 
 I started by setting the ```n_range=[100, 500, 1000, 5000]``` and running the RFC with the number of estimators set as each value in the n-range. Then I fit the model and found the training and testing scores. I ran this loop over the range several times to determine which value of n consistently performed the best on the testing dataset. Though all performed relatively similarly, ```n=1000``` consistently performed the best. The training and testing scores are shown below for each value in ```n_range```.
 
-<img src = 'p5_5.PNG' height = '450' width = '350'/>
+<img src = 'p5_5.PNG' height = '100' width = '250'/>
 
 To test the minimum number of samples required to split an internal node, I set the ```n_range``` to (20, 30) and ran RFC over the values, setting the number of estimators to 1000 and the minimum number of samples to each n in the range before fitting the model. I appended the training and testing scores for each n-value and found that 28 and 29 performed the best having run the loop several times-both values had a testing score of 0.544 and training scores of approximately 0.65. 
 
 For the Random Forest Model, I did not initally scale the data when determining the training and testing datsets. I later scaled the data when determining the training and testing datasets and compared the results: 
 
 accuracy of classification for scaled data and unscaled data
-<img src = 'p5_6.PNG' height = '750' width = '350'/>   <img src = 'p5_14.PNG' height = '750' width = '350'/>
-<img src = 'p5_7.PNG' height = '250' width = '350'/>   <img src = 'p5_15.PNG' height = '250' width = '350'/>
+
+<img src = 'p5_6.PNG' height = '550' width = '350'/>   <img src = 'p5_14.PNG' height = '550' width = '350'/>
+
+<img src = 'p5_7.PNG' height = '180' width = '350'/>   <img src = 'p5_15.PNG' height = '180' width = '350'/>
 
 ### Modeling Dataset with Recoded WealthC Target
 
+Similar to the preprocessing that was done for the original dataset, I removed nan values and recast the datatypes for the age and education features. However, I recoded the ```wealthC``` variable to combine classes 2 and 3. To do this, I created a copy of the original data and found the indices where ```wealthC``` was equal to 2. Then I set the ```wealthC``` value to 3 for these observations. Finally, I subset the data for X and y. 
 
 #### K-Nearest Neighbors Classification
 
+Similar to the KNN process for the original dataset, I split the dataset into training and testing sets using ```GetData(scale = True)```. Then I set the ```n_range``` to (10, 80) and found the maximum testing score to be 0.56076 at ```n=72```. I then narrowed the range to (60, 80) and foudn a maximum testing score of 0.55783 at ```n=71```. 
+
+<img src = 'p5_8.PNG' height = '350' width = '450'/>  <img src = 'p5_9.PNG' height = '350' width = '450'/>
+
+After adding distance as a weight to the KNN Classification, I found that the optimal n-value decreased, as did the testing scores. The maximum testing score was 0.52318 at ```n=67```. Thus, adding distance as a weight did not significantly improve the accuracy of the model. 
+
+<img src = 'p5_10.PNG' height = '350' width = '450'/>
+
 #### Logistic Regression
+
+For the Logistic Regression, I ran the fit the model over the scaled training dataset and calculated the training and testing scores. After running the regression several times, I found the average training and testing scores to be 0.54806 and 0.55278, respectively. Compared to the results of the KNN Classification, the accuracy of the models are very similar. 
 
 #### Random Forest Model
 
+Similarly to the process used for the original dataset, I fit the Random Forest Model over the training set for each given number of estimators, 100, 500, 1000, 5000. After running the loop several times, I found that ```n=5000``` consistently performed the best based on the testing scores. This change in an optimal number of estimators may be due to the decrease in number of classes. Since there were only 3 classes in the recoded target, more estimators may have been needed to predict the ```wealthC``` value. 
+
+<img src = 'p5_11.PNG' height = '100' width = '250'/>
+
+To find the minimum number of samples required to split an internal node, I fit RFC to the training data with the ```min_samples_split``` set to n over a range of (20, 30). After running the loop multiple times, I found the best n-value to be 28 or 29, which each had testing scores of 0.544. 
+
+Similar to the previous dataset, I initially used an unscaled dataset for the Random Forest Model, but upon comparing it to the scaled testing and training set, found that the accuracy of the two models was nearly the same. 
+
+accuracy of classification for scaled and unscaled data
+
+<img src = 'p5_12.PNG' height = '550' width = '350'/>   <img src = 'p5_16.PNG' height = '550' width = '350'/>
+
+<img src = 'p5_13.PNG' height = '180' width = '350'/>   <img src = 'p5_75.PNG' height = '180' width = '350'/>
+
 ---
 ### Final Thoughts
-min num splits for random forest: 28 or 29
-28 0.5446559297218155
-29 0.5436798438262567 most training scores were .65 ish
-img 4: table of scaled data when performing rfc, n=100
-5: table of training and testing scores for rfc for (100, 500, 1000, 5000)  compare to 6, 7 (scaled)
 
-2&3 combined
-8:knn range (10, 80) max test score 72, 0.5607613469985359
-9: knn range (60, 80) max test score 71, 0.5578330893118595
-10: knn with weight range (10, 80) 67, 0.5231820400195217
-0.5485026041666666, 0.5490483162518301; 0.5465494791666666, 0.5539287457296243 log regression
-
-11: rfc all were close n=5000 consistently performed better
 min num splits for random forest 29 or 28
 29 0.5436798438262567
 28 0.541727672035139
