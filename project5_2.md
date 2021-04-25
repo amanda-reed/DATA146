@@ -66,7 +66,7 @@ accuracy of classification for scaled and unscaled data
 
 <img src = 'p5_12.PNG' height = '550' width = '350'/>   <img src = 'p5_16.PNG' height = '550' width = '350'/>
 
-<img src = 'p5_13.PNG' height = '180' width = '350'/>   <img src = 'p5_75.PNG' height = '180' width = '350'/>
+<img src = 'p5_13.PNG' height = '180' width = '350'/>   <img src = 'p5_17.PNG' height = '180' width = '350'/>
 
 ---
 ### Final Thoughts
